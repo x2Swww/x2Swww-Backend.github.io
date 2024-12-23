@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+    <header class="navbar">
+        <h1>My Website</h1>
+        <nav>
+            <a href="http://127.0.0.1:5000/" class="nav-link active">Home</a>
+            <a href="next-content-section" class="nav-link">Content</a>
+            <button onclick="openPopup()" class="btn-about" aria-label="Learn more about us">ABOUT US</button>
+        </nav>
+    </header>
+
+    <div id="overlay">
+        <div id="popup">
+            <p>เกี่ยวกับพวกเรา ม.2/2</p>
+            <p>จัดทำโดยเด็กชายวรินทร เทพเซ่งหลี เลขที่11</p>
+            <p>เตรียมเนื้อหาโดยเด็กชายศรรวริศ ทองสมุทร เลขที่13</p>
+            <p>เช็คความถูกต้องเนื้อหาโดยเด็กชายฮัสซัน รบเมือง เลขที่14</p>
+            <button onclick="closePopup()" class="about-btn" aria-label="Learn more about us">close now</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>ยินดีต้อนรับเข้าสู่เว็บไซต์ของเรา</h1>
+        <p>เว็บไซต์นี้คือผลงานส่ง อาจารย์กรพล ทิวากรพิสุทธิ์ รายวิชาคณิตศาสตร์เพิ่มเติม ทางเราหวังเป็นอย่างยิ่งว่าทุกอย่างจะเป็นไปได้ด้วยดี กดปุ่มด้านล่างเพื่อเริ่มต้น Get Start</p>
+        <a href="#next-section" class="cta">next Now</a>
+    </section>
+
+    <section id="next-section" class="hero">
+        <h1>อ่านและรู้คู่ขนานสู่เหตุผล</h1>
+        <p>นี่คือชื่อของชิ้นงานหรือผลงานที่พวกเราร่วมกันทำ เว็บไซต์นี้มีเนื้อหาเกี่ยวกับนิยามบท ทฤษฎีบท และโจทย์พร้อมวิธีทำเนื้อหาทั้งหมดเกี่ยวข้องกับเรื่อง เส้นขนาน และเรื่อง การให้เหตุผลทางเรขาคณิต</p>
+        <a href="next-content-section" class="cta">Start Now</a>
+    </section>
+
+    <footer class="navbar"></footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
